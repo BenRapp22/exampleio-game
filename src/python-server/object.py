@@ -9,8 +9,8 @@ class Object:
         self.speed=speed
 
     def update(self, dt):
-        self.x += dt * self.speed * math.sin(self.direction);
-        self.y -= dt * self.speed * math.cos(self.direction);
+        self.x += dt * self.speed * math.sin(self.dir);
+        self.y -= dt * self.speed * math.cos(self.dir);
     
     def distanceTo(self, obj):
         dx = self.x - obj.x

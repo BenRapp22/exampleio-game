@@ -87,3 +87,8 @@ typings/
 # Added by me
 .DS_Store
 dist/
+.vscode
+
+# Python 
+.pytest_cache/
+__pycache__/

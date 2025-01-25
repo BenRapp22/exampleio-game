@@ -9,6 +9,14 @@ class Bullet(Object):
         self.parentID = parentID
     
     def update(self, dt):
-        super.update(dt)
+        """Returns true if the bullet should be destroyed
+            dt: delta value for update
+        """
+        super().update(dt)
         return self.x < 0 or self.x > constants.MAP_SIZE or self.y < 0 or self.y > constants.MAP_SIZE
     
+
+if __name__ == '__main__':
+    import math
+    bullet = Bullet('test-id', 1, 1, math.pi)
+    bullet.update(1)
