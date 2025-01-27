@@ -5,7 +5,7 @@ from player import Player
 import constants
 
 def testApplyCollisions():
-    distance_from_player = constants.BULLET_RADIUS + constants.PLAYER_RADIUS
+    distance_from_player = constants.BULLET_RADIUS + constants.PLAYER_RADIUS + 1
     players = [
         Player('1', 'guest1', 1000, 40),
         Player('2', 'guest2', 2000, 2000)

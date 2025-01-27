@@ -8,7 +8,7 @@ def applyCollisions(players, bullets):
             bullet = bullets[i]
             player = players[i]
 
-            if (bullet.parentID == player.id) and (player.distanceTo(bullet) <= constants.PLAYER_RADIUS):
+            if (bullet.parentID != player.id) and (player.distanceTo(bullet) <= constants.PLAYER_RADIUS+constants.BULLET_RADIUS):
                 destroyedBullets.append(bullet)
                 player.takeBulletDamage()
                 break
