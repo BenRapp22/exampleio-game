@@ -37,11 +37,8 @@ class Player(Object):
         self.score += constants.SCORE_BULLET_HIT
     
     def serializeForUpdate(self):
-        d = super().serializeForUpdate()
-        d.update({
+        return {
+            **super().serializeForUpdate(),
             'direction':self.dir,
             'hp':self.hp
-        })
-
-        return d
-
+        }
